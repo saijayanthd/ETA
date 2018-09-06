@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import $ from 'jquery';
 import Select from 'react-select';
-const counter1 = 0 ;
+
 
 export class Quiz extends React.Component{
     constructor(props) {
@@ -44,31 +44,26 @@ export class Quiz extends React.Component{
         var self = this;
         const{questions,isLoaded} = this.state;
         const{counter} = this.props
+        var counter2;
         if(!counter){
-            counter = 0;
+            counter2 = 0;
         }
         if(!isLoaded){
             return(
             <div>Loading....</div>)
         }else{
             return(
-                questions.ques.map(function(que){
-                    return(
-                        <div class = 'quizquestion' align="left">
-                            <p>{que.qText}</p>
-                            <div>
-                            {que.options.map(function(qu){
+                <div className='quizquestion'>
+                    <p>{questions.ques[counter2].qText}</p>
+                    {questions.ques[counter2].options.map(function(qu){
                                 return(
                                     <div>
                                     <button value = {qu} onClick={self.toggleList} >{qu}</button><br/><br/>
                                     </div>
                                 )
                             })}
-                            <Check ans={self.state.correct} details={questions}/>
-                            </div>
-                        </div>
-                    )
-                })
+                            <Check ans={self.state.correct} details={questions} stage={counter2}/>
+                </div>
             )
         }
     }
@@ -77,19 +72,26 @@ export class Quiz extends React.Component{
 export class Check extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {questions:[],ans:''};      
+        this.navigate = this.navigate.bind(this);
+        this.state = {count:''};      
+    }
+    navigate(e){
+        alert(this.props.stage);
+        this.props.history.push('/quiz/'+this.props.stage+1);
     }
     render(){
-        var self = this;
-        const{ans,details} = this.props;
-        console.log(ans)
+        const{ans,details,stage} = this.props;
         if(!ans){
             return(
-            <div><button disabled={!ans} class='wrongButton'>continue</button></div>)
+            <div><button disabled={!ans} className='wrongButton'>continue</button></div>)
         }else{
-            counter = counter+1
+            
             return(
-                <div><button onClick = {}>continue</button></div>
+                <div>
+                    <form>
+                        <button onClick = {this.navigate}>continue</button>
+                    </form>
+                </div>
             )
         }
     }

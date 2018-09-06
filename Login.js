@@ -7,11 +7,11 @@ export class Login extends React.Component {
                     super(props);
                     this.display = this.display.bind(this);
                     this.start = this.start.bind(this);
-                    this.state = {data:{ username: '' ,password:''}};      
+                    this.state = {data:{ uname: '' ,password:''}};      
                 }
 
                 display(e){
-                    if(this.state.data.username == 'admin' && this.state.data.password == 'admin'){
+                    if(this.state.data.uname == 'admin' && this.state.data.password == 'admin'){
                         this.props.history.push('/home');
                     }else{
                         alert('Fail')
@@ -37,18 +37,4 @@ export class Login extends React.Component {
                                 </form>
                                 </div>
                         )}
-}
-
-export class Rater extends React.Component{
-            render(){
-                     var items=[];
-                     for(var i=1;i<this.props.maxlength;i++){
-                         var clickHandler=this.props.onSelected && this.props.onSelected.bind(null,i);
-                         items.push(<p className={i<=this.props.value && 'filled'} 
-                                     onClick={clickHandler}>{'\u2605'}</p>)
-                         }
-                     return(
-                           <p className="rating">{items}</p>
-                          )
-                   }
 }

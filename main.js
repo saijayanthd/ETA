@@ -12,5 +12,6 @@ import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
         <Route  path = "/home" component = {Home}/>
         <Route  path = "/details" component = {Uicourses}/>
         <Route  path = "/quiz" component = {Quiz}/>
+        <Route  path = "/quiz/:counter" component = {Quiz}/>
         </div>
         </Router>),document.getElementById('app'))  
