@@ -7,11 +7,11 @@ export class Login extends React.Component {
                     super(props);
                     this.display = this.display.bind(this);
                     this.start = this.start.bind(this);
-                    this.state = {data:{ uname: '' ,password:''}};      
+                    this.state = {data:{ username: '' ,password:''}};      
                 }
 
                 display(e){
-                    if(this.state.data.uname == 'admin' && this.state.data.password == 'admin'){
+                    if(this.state.data.username == 'admin' && this.state.data.password == 'admin'){
                         this.props.history.push('/home');
                     }else{
                         alert('Fail')
