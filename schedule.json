@@ -1,0 +1,136 @@
+{
+  "course": [
+    {
+      "name": "React JS",
+      "startdate": "1st",
+      "enddate":"4th",
+      "month":"August"
+    },
+    {
+      "name": "TypeScript",
+      "date": "5th August"
+    },
+    {
+      "name": "BackBone",
+      "date": "6th - 9th August"
+    },
+    {
+      "name": "React",
+      "date": "10th - 14th August"
+    }
+  ],
+  "details": {
+    "React JS": {
+      "educator": "Roopshri Muthaiah",
+      "mode": "VCR"
+    },
+    "TypeScript": {
+      "educator": "Anupama",
+      "mode": "VCR"
+    },
+    "BackBone": {
+      "educator": "Viraj",
+      "mode": "VCR"
+    },
+    "React": {
+      "educator": "Jayanth",
+      "mode": "VCR"
+    }
+  },
+  "dropdown": [
+    {
+      "value": "NA",
+      "label": "NA"
+    },
+    {
+      "value": "React JS",
+      "label": "React JS"
+    },
+    {
+      "value": "TypeScript",
+      "label": "TypeScript",
+      "educator": "Roopshri Muthaiah",
+      "mode": "VCR"
+    },
+    {
+      "value": "BackBone",
+      "label": "BackBone",
+      "educator": "Roopshri Muthaiah",
+      "mode": "VCR"
+    },
+    {
+      "value": "React",
+      "label": "React",
+      "educator": "Roopshri Muthaiah",
+      "mode": "VCR"
+    }
+  ],
+  "uicourses": [
+    {
+      "Name": "React",
+      "description": "This course is intended to introduce the concepts of React JS to develop web pages. It helps to understand features of React, JSX, components, how to modify the data in a very efficient manner and flux overview."
+    },
+    {
+      "Name": "Angular",
+      "description": "This course is intended to introduce the concepts of Angular JS to develop web pages. It helps to understand basic concepts of Single Page application (SPA), Module View Controller (MVC) concepts in angular application, Angular directives, filters, Dependency Injection, and Ajax Programming"
+    },
+    {
+      "Name": "Handlebars",
+      "description": "The course introduces the client side templating and when to use a javacsript templating engine. It then helps in understanding Handlebar framework and explains Expressions, Blocks, Paths, Partials and Helpers ."
+    },
+    {
+      "Name": "SASS",
+      "description": "This course is intended to introduce the need of CSS preprocessor and SASS. The course details about SASS compilation, installation, variables, mixins, operations, color functions, nested rules, directives, SASS IDEs and elements."
+    }
+  ],
+  "ques":[
+      {"id":1,
+        "qText":"Everything in React is a",
+        "options":[
+            "Module",
+            "Component",
+            "Class",
+            "Object",
+            "None Of the above"
+        ],
+        "ans":"Module"
+    },
+    {"id":2,
+      "qText":"What is ReactJS?",
+        "options":[
+            "Server side framework",
+            "Client side framework",
+            "Both",
+            "Database",
+            "None Of the above"
+        ]
+    },
+    {"id":3,
+      "qText":"Usage of JSX is mandatory",
+        "options":[
+            "True",
+            "False"
+        ]
+    },
+    {"id":4,
+      "qText":"Everything in React is a",
+        "options":[
+            "Module",
+            "Component",
+            "Class",
+            "Object",
+            "None Of the above"
+        ]
+    },
+    {"id":5,
+      "qText":"Everything in React is a",
+        "options":[
+            "Module",
+            "Component",
+            "Class",
+            "Object",
+            "None Of the above"
+        ]
+    }
+  ]
+}
